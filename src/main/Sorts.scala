@@ -35,7 +35,7 @@ A
 
   for(i <- 0 until A.size){
      var max = i;
-	 println(s"i=$i");
+	 //println(s"i=$i");
 	 
 	 for(j <- i+1 until A.size){
        if(A(j) > A(max))
@@ -45,7 +45,7 @@ A
       {
 		swap(A,max,i)
      } 
-	 println(A.mkString(","))
+	 //println(A.mkString(","))
   }
  A
  }
