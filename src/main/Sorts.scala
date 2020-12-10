@@ -59,5 +59,38 @@ def bubbleSort(A: Array[Int]): Array[Int] = {
 	         }
 	A
   }
+  
+  def recInsertionSort(A: Array[Int], n: Int): Array[Int] = {
+	 println(s"n=$n")
+	 println(A.mkString(","))
+	 
+	 if(n <= 1) return A
+	 recInsertionSort(A, n-1)
+     
+    var j = n - 1
+    while(j >= 1 && A(j) >  A(j+1)) {
+	  swap(A,j+1,j)
+	  j = j - 1
+	 }
+	A	  
+    }
  
+   def insertionSort(A: Array[Int]): Array[Int] = {
+	   val n = A.size
+	   for(i <- 1 until n){
+		   println(s"i=$i")
+		   val x = A(i)
+		   var j = i - 1
+		   while( j>= 0 && A(j) > x) {
+			   //print(s"j=$j,")
+			   A(j+1) = A(j)
+			   j = j - 1
+			   
+		   }
+		   //println(A.mkString(","))
+		   A(j+1) = x  
+		   
+	   }
+	   A
+   }
  }
