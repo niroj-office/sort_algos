@@ -49,5 +49,15 @@ A
   }
  A
  }
+
+def bubbleSort(A: Array[Int]): Array[Int] = {
+	val n = A.size
+	for (i <- 0 until n)
+		for(j <- n-1 until i by -1){
+		  if( A(j-1) > A(j))
+                   swap(A,j-1,j)
+	         }
+	A
+  }
  
  }
